@@ -1,4 +1,4 @@
-const { where } = require('sequelize');
+
 const db = require('../config/db.config');
 const Categorie = db.Categorie
 
@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
         Categorie.create(categorie).then(result => {
             res.status(200).json({
-                message: "Upload Successfully a Order with id = " + result.id,
+                message: "Upload Successfully a Order with id = " + result.id_categorie,
                 categorie: result,
             })
         });
